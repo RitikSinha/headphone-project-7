@@ -12,16 +12,19 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 /* nav bar */
 nav {
   display: flex;
-  padding: 80px 50px 0 50px;
+  padding: 2.5rem 2rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-
+.logo {
+  width: 120px;
+}
 .nav-items {
   display: flex;
 }
@@ -35,7 +38,7 @@ nav {
 }
 /* hero section */
 .intro-section {
-  margin: 0 10%;
+  padding: 0 30px;
   display: flex;
 }
 /* left section */
@@ -76,6 +79,7 @@ nav {
   font-size: 0.8rem;
   color: var(--grey);
   margin-top: 40px;
+  margin-bottom: 40px;
   width: 70%;
 }
 
@@ -102,7 +106,7 @@ nav {
   position: absolute;
   width: 120px;
   top: 50%;
-  left: 10%;
+  left: 20%;
   text-shadow: 10px -10px 5px #121212;
 }
 .discount-content {
@@ -117,7 +121,7 @@ nav {
   font-family: "Fredoka One";
   font-weight: 400;
   top: 56%;
-  left: 15%;
+  left: 24%;
   z-index: 2;
 }
 .discount-content h1 {
@@ -125,18 +129,18 @@ nav {
 }
 .headphone {
   margin-top: 10px;
-  margin-left: 70px;
-  width: 80%;
+  margin-left: 0;
+  width: 450px;
 }
 .dots {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 90px;
 }
 .dot {
   width: 20px;
   height: 20px;
   border-radius: 100px;
-  margin-left: 30px;
   margin-bottom: -10px;
   margin-top: -25px;
 }
@@ -148,4 +152,57 @@ nav {
 }
 .black-dot {
   background-color: #121212;
+}
+/* responsive code */
+@media screen and (max-width: 1140px) {
+  /* navbar */
+  nav {
+    padding: 2rem 1rem;
+  }
+  .nav-items {
+    display: none;
+  }
+  .logo {
+    width: 6rem;
+  }
+  .action {
+    display: 15rem;
+  }
+  .text {
+    width: 100%;
+  }
+}
+/* smaller screen */
+@media screen and (max-width: 980px) {
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1px;
+    padding-bottom: 20px;
+  }
+  .left-section {
+    text-align: center;
+  }
+  .headphone {
+    width: 80vw;
+  }
+  .discount {
+    width: 30%;
+    left: 10px;
+    bottom: 8%;
+  }
+  .discount-content {
+    left: 10%;
+    bottom: 32%;
+  }
+  .discount-content h4 {
+    font-size: 0.8rem;
+  }
+  .discount-content h1 {
+    font-size: 0.8rem;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
 }
